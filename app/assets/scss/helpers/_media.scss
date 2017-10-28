@@ -1,0 +1,29 @@
+// Media Device Breakpoints
+$large-mobile         : "min-width: 480px";
+$tablet               : "min-width: 768px";
+$desktop              : "min-width: 960px";
+$large-desktop        : "min-width: 1280px";
+
+// Breakpoints
+@mixin breakpoint($breakpoint, $media: screen) {
+    @if $breakpoint == large-mobile {
+        @media only #{$media} and ($large-mobile) {
+            @content;
+        }
+    }
+    @else if $breakpoint == tablet {
+        @media only #{$media} and ($tablet) {
+            @content;
+        }
+    }
+    @else if $breakpoint == desktop {
+        @media only #{$media} and ($desktop) {
+            @content;
+        }
+    }
+    @else if $breakpoint == large-desktop {
+        @media only #{$media} and ($large-desktop) {
+            @content;
+        }
+    }
+}

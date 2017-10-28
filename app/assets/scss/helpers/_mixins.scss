@@ -1,0 +1,47 @@
+/* Image replacement - hide text */
+@mixin text-hide {
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+// center full
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// center top only
+@mixin center-vertical {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin center-horizontal {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
