@@ -8,5 +8,10 @@ module HackYeahPpp
 
     A9n.root = File.expand_path('../..', __FILE__)
     A9n.load
+
+    config.i18n.default_locale = :pl
+
+    Dir[Rails.root.join('lib', '*.rb')].each { |file| require file }
+    Dir[Rails.root.join('lib', '{controller,extensions}', '**', '*.rb')].each { |file| require file }
   end
 end
