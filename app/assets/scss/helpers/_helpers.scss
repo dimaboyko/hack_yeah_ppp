@@ -1,0 +1,35 @@
+%margin-auto {
+  margin: 0 auto;
+}
+
+%inline-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+%label-style {
+  user-select: none;
+  -webkit-touch-callout: none;
+  display: block;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+%center-flex-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%fit-content {
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+%max-content {
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: max-content;
+}
