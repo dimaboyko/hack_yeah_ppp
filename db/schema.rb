@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028160318) do
+ActiveRecord::Schema.define(version: 20171028180615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,11 @@ ActiveRecord::Schema.define(version: 20171028160318) do
     t.text "auction_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "auction_uuid"
-    t.index ["auction_uuid"], name: "index_auctions_on_auction_uuid"
+    t.text "auction_id"
+    t.boolean "fraud_possibility"
+    t.text "auction_provider"
+    t.index ["auction_id"], name: "index_auctions_on_auction_id"
+    t.index ["auction_provider", "auction_id"], name: "index_auctions_on_auction_provider_and_auction_id", unique: true
     t.index ["auctioneer_id"], name: "index_auctions_on_auctioneer_id"
   end
 

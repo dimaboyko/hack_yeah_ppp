@@ -13,7 +13,7 @@ module Api
 
       def auction_params
         params.require(:auction).permit(
-          :auctioneer_id, :auction_uuid,
+          :auctioneer_id, :auction_id, :auction_provider,
           :auctioneer_data => {}, auction_data: {}
         )
       end

@@ -7,7 +7,12 @@ module Auctions
     end
 
     def perform
-      Auction.create(auction_data)
+      ::Auction.create!(auction_data).tap { |auction|
+        # MOVE to DelayedJob
+        ::Classifier::Client.instance.classify_auction(auction)
+      }
+    rescue ActiveRecord::RecordNotUnique
+      false
     end
 
     private

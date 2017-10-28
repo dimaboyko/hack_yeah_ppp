@@ -12,6 +12,6 @@ module HackYeahPpp
     config.i18n.default_locale = :en
 
     Dir[Rails.root.join('lib', '*.rb')].each { |file| require file }
-    Dir[Rails.root.join('lib', '{controller,extensions}', '**', '*.rb')].each { |file| require file }
+    Dir[Rails.root.join('lib', '{controller,extensions,classifier}', '**', '*.rb')].each { |file| require file }
   end
 end

@@ -18,7 +18,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'responders'
 gem 'a9n'
 
+gem 'excon'
+
 group :development, :test do
+  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
