@@ -13,6 +13,8 @@ module Scarpers
       auctioneer_company_data = document_data.at_css('#sellerUserData')
       auctioneer_contact_data = document_data.at_css('#sellerInfoContactInfo')
 
+      return {} if auctioneer_company_data.nil? || auctioneer_contact_data.nil?
+
       {}.tap { |hash_data|
         hash_data.merge!(company_data_from(auctioneer_company_data))
         hash_data.merge!(contact_data_from(auctioneer_contact_data))
@@ -48,13 +50,13 @@ module Scarpers
 
     def contact_data_from(auctioneer_contact_data)
       {
-        # phone: sanitizer_html_from(
-        #   auctioneer_contact_data.css('ul.multicontact').first.children
-        # ),
-        # email: sanitizer_html_from(
-        #   auctioneer_contact_data.css('a.seller-contact-mail').first.children
-        # )
+        phones: collect_items_for(auctioneer_contact_data.css('a[href^="tel"]')),
+        emails: collect_items_for(auctioneer_contact_data.css('a[href^="mailto"]'))
       }
+    end
+
+    def collect_items_for(data)
+      data.map(&:children).map(&:to_s).compact.uniq
     end
 
     def sanitizer_html_from(data)
