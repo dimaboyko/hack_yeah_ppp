@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+}
+body {
+  background: $primary-color;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+  padding: 66px 0 0;
+  @media #{$medium-and-down} {
+    padding-top: 0;
+  }
+}
+strong {
+  font-weight: 500;
+}
+.pointer-events-auto {
+  pointer-events: auto !important
+}
+.white-link {
+  color: $white;
+  text-decoration: underline;
+}

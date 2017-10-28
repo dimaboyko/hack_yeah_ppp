@@ -1,5 +1,32 @@
 {
   "name": "hack_yeah_ppp",
+  "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimaboyko/hack_yeah_ppp.git"
+  },
+  "description": "",
+  "main": "gulp.js",
+  "scripts": {
+    "gulp": "./node_modules/gulp/bin/gulp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "browser-sync": "^2.18.13",
+    "fs": "0.0.1-security",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.12.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.11",
+    "main-bower-files": "^2.9.0"
+  },
   "dependencies": {}
 }

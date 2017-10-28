@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import "base/normalize"; // Reset/normalize
+
+// Import materialize framework
+@import "materialize/materialize";   // Materialize.css Framework
+@import "helpers/var";
+@import "vendor/datatables";
+
+// // Global style and reset
+// @import "base/general";  // Global settings (generic slectors etc.)
+//
+// // Layout
+// @import "layout/header";  // Page header
+// @import "layout/footer";  // Page footer
+// @import "layout/sidebar";
+@import "layout/common";
+// @import "layout/select";
+// @import "layout/file-preview";
+// @import "layout/settings";
+// @import "layout/mod-materialize";
