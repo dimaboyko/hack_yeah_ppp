@@ -28,22 +28,22 @@ module Scarpers
     def company_data_from(auctioneer_company_data)
       {
         company_name: sanitizer_html_from(
-          auctioneer_company_data.css('div.seller-user-cname').first.children
+          auctioneer_company_data.at_css('div.seller-user-cname').try(:children)
         ),
         company_city: sanitizer_html_from(
-          auctioneer_company_data.css('div.seller-user-city').first.children
+          auctioneer_company_data.at_css('div.seller-user-city').try(:children)
         ),
         company_street: sanitizer_html_from(
-          auctioneer_company_data.css('div.seller-user-street').first.children
+          auctioneer_company_data.at_css('div.seller-user-street').try(:children)
         ),
         company_nip: sanitizer_html_from(
-          auctioneer_company_data.css('div.seller-user-nip').first.children
+          auctioneer_company_data.at_css('div.seller-user-nip').try(:children)
         ),
         company_regon: sanitizer_html_from(
-          auctioneer_company_data.css('div.seller-user-regon').first.children
+          auctioneer_company_data.at_css('div.seller-user-regon').try(:children)
         ),
         company_krs: sanitizer_html_from(
-          auctioneer_company_data.css('div.seller-user-krs').first.children
+          auctioneer_company_data.at_css('div.seller-user-krs').try(:children)
         )
       }
     end
