@@ -11,6 +11,8 @@ module Auctions
         # MOVE to DelayedJob
         # klasa odpalająca pobranie z http://allegro.pl/sellerInfoFrontend/11303540/aboutSeller i zapisująca te dane do auctioneer_data
 
+        hash_data = ::Scarpers::Auctioneer.perform(auction.auctioneer_id)
+
         # MOVE to DelayedJob
         # klasa odpalająca pobranie z http://allegro.pl/show_item.php?item=6993255084 i zapisująca te dane do auction_data
 
