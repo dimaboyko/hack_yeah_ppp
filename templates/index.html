@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pl">
+<head>
+  <title>VATman</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/common/application.css">
+</head>
+<body>
+  <header class="page-header x-header">
+    <div class="layout-wrapper page-header__content">
+      <a href="index.html" class="brand">VATman</a>
+      <!-- <nav class="page-nav">
+        <ul class="page-nav__list">
+          <li><a class="active" href="#">Inbox <span>(7)</span></a></li>
+          <li><a href="#">Archived</a></li>
+          <li><a href="#">Deleted</a></li>
+        </ul>
+      </nav> -->
+      <div class="page-header__options">
+        <!-- <form class="search-form" action="#">
+          <button class="search-trigger search-form__btn x-search-trigger" href="#">Search</button>
+          <input placeholder="Search ..." type="text" id="search" class="autocomplete" autocomplete="off">
+          <a class="search-form__close x-search-close" href="#">Close</a>
+        </form>
+        <a href="#" data-activates="slide-out" class="button-collapse button-files-status">
+          Files
+          <span class="number-badge">12</span>
+        </a> -->
+        <a class="dropdown-button user-menu-trigger" href="#" data-activates="dropdown-settings" data-stoppropagation="true">vatman@vatman.com</a>
+        <ul id="dropdown-settings" class="dropdown-content">
+          <li><a href="#!">Ustawienia</a></li>
+          <li><a href="#!">Pomoc</a></li>
+          <li><a href="#!">Wyloguj</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- <div class="section-header">
+    <section class="layout-wrapper">
+      <h1>Welcome Jonathan</h1>
+      <div class="status-summary">
+        <span class="status-summary__label">Check out status your files:</span>
+        <ul>
+          <li class="status status--recognized">2 file recognized</li>
+          <li class="status status--ready">3 files are ready to booked</li>
+          <li class="status status--queued">2 file queued</li>
+        </ul>
+      </div>
+    </section>
+  </div> -->
+  <main class="layout-wrapper">
+    <h2>Lista aukcji</h2>
+    <div class="table-wrapper">
+      <table class="bordered table-files x-table" id="table-data">
+        <thead>
+          <tr>
+            <th>ID aukcji</th>
+            <th class="table__main-col">Przedmiot auckji</th>
+            <th>Kwota</th>
+            <th>Status</th>
+            <th>Szczegóły</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-target="modal" class="item-alert">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>4200 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>4200 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>4200 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>4200 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>4200 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>4200 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>4200 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>3452 PLN</td>
+            <td>Podejrzany</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>3200 PLN</td>
+            <td>Pewny</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>3200 PLN</td>
+            <td>Pewny</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>3200 PLN</td>
+            <td>Pewny</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>3200 PLN</td>
+            <td>Pewny</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>3200 PLN</td>
+            <td>Pewny</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+          <tr data-target="modal">
+            <td><a href="#">45789098</a></td>
+            <td>Nowy iPhone X - najtaniej</td>
+            <td>3200 PLN</td>
+            <td>Pewny</td>
+            <td><a href="#">Szczegóły</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="layout-wrapper">
+      &copy; 2017 VATman
+    </div>
+  </footer>
+  <div id="modal" class="modal bottom-sheet custom-modal">
+    <div class="custom-modal__header">
+      <div class="layout-wrapper custom-modal__header-content">
+        <span class="invoice-title">invoice-2016-12-08 <span>added 12th December via mobile</span></span>
+        <div class="modal-options">
+          <a href="#!" class="modal-action modal-prev">Preview</a>
+          <a href="#!" class="modal-action modal-next">Next</a>
+          <a href="#!" class="modal-action modal-close">Close</a>
+        </div>
+      </div>
+      <div class="custom-modal__actions">
+        <div class="layout-wrapper custom-modal__actions-content">
+          <a href="#" class="btn btn-flat blue waves-effect waves-light">Send</a>
+          <a href="#" class="btn btn-flat btn--cancel waves-effect waves-light">Delete</a>
+          <a class="dropdown-button options-button waves-effect" href="#" data-activates="dropdown-options5">Options</a>
+          <ul id="dropdown-options5" class="dropdown-content">
+            <li><a href="#!">Send</a></li>
+            <li><a href="#!">Delete</a></li>
+            <li><a href="#!">Select</a></li>
+          </ul>
+          <div class="resize-options">
+            <a class="resize-options__half x-resize-half" href="#">Resize 50/50</a>
+            <a class="resize-options__default x-resize-default" href="#">Resize 70/30</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-content">
+      <div class="layout-wrapper custom-modal__content custom-modal__content--half">
+        <div class="file-preview-box">
+          <figure>
+            <img src="/images/content/invoice-temp.jpg" alt="">
+          </figure>
+          <div class="file-preview__toolbar">
+            <a class="file-preview__zoomin" href="#">Zoom In</a>
+            <a class="file-preview__zoomout" href="#">Zoom Out</a>
+            <a class="file-preview__rotate" href="#">Rotate</a>
+            <a class="file-preview__download" href="#">Download</a>
+          </div>
+        </div>
+        <form class="invoice-form" action="#">
+          <div class="input-field">
+            <select name="" id="invoice-type">
+              <option value="">Recipe</option>
+              <option value="">Invoice</option>
+            </select>
+            <label for="invoice-type">Type</label>
+          </div>
+          <div class="input-field">
+            <input id="invoice-date" type="text" class="datepicker">
+            <label for="invoice-date">Date</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="supplier" class="autocomplete" autocomplete="off">
+            <label for="supplier">Supplier</label>
+          </div>
+          <div class="input-field">
+            <input id="invoice-number" type="text">
+            <label for="invoice-number">Invoice number</label>
+          </div>
+          <div class="input-field">
+            <input id="invoice-due" type="text" class="datepicker">
+            <label for="invoice-due">Due date</label>
+          </div>
+          <div class="input-field">
+            <select name="" id="invoice-currency">
+              <option value="" selected>PLN</option>
+              <option value="">USD</option>
+              <option value="">USD</option>
+              <option value="">PLN</option>
+              <option value="">USD</option>
+              <option value="">USD</option>
+              <option value="">PLN</option>
+              <option value="">USD</option>
+              <option value="">USD</option>
+              <option value="">PLN</option>
+              <option value="">USD</option>
+              <option value="">USD</option>
+              <option value="">PLN</option>
+              <option value="">USD</option>
+              <option value="">USD</option>
+              <option value="">PLN</option>
+              <option value="">USD</option>
+              <option value="">USD</option>
+              <option value="">PLN</option>
+              <option value="">USD</option>
+              <option value="">USD</option>
+            </select>
+            <label for="invoice-currency">Currency</label>
+          </div>
+          <div class="input-field">
+            <input id="total-amount" type="text" value="3.77">
+            <label for="total-amount">Total amount</label>
+          </div>
+          <div class="input-field">
+            <input id="tax-amount" type="text" value="1.77">
+            <label for="tax-amount">Tax amount</label>
+          </div>
+          <div class="input-field">
+            <input id="net-amount" disabled type="text" value="3.77">
+            <label for="net-amount">Net amount</label>
+          </div>
+          <div class="input-field">
+            <select name="" id="invoice-category">
+              <option value="" selected>Other</option>
+              <option value="">Electricity</option>
+              <option value="">Media</option>
+            </select>
+            <label for="invoice-category">Currency</label>
+          </div>
+          <div class="input-field">
+            <select name="" id="invoice-payment">
+              <option value="" selected>Yes</option>
+              <option value="">No</option>
+            </select>
+            <label for="invoice-payment">Paid</label>
+          </div>
+          <div class="input-field">
+            <select name="" id="payment-method">
+              <option value="" selected>Yes</option>
+              <option value="">No</option>
+            </select>
+            <label for="payment-method">Payment method</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="slide-out" class="side-nav custom-sidebar">
+    <ul class="tabs">
+      <li class="tab"><a class="icon icon-uploading active" href="#tab1">Uploading <span class="number-badge">12</span></a></li>
+      <li class="tab"><a class="icon icon-processing" href="#tab2">Processing <span class="number-badge">5</span></a></li>
+      <li class="tab"><a class="icon icon-exporting" href="#tab3">Exporting</a></li>
+      <li class="tab"><a class="icon icon-errors" href="#tab4">Errors</a></li>
+    </ul>
+    <div class="tabs-content">
+      <div id="tab1" class="tabs-content__item">
+        <ul class="files-list">
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="tab2" class="tabs-content__item">
+        <ul class="files-list">
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="tab3" class="tabs-content__item">
+        <ul class="files-list">
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+          <li>
+            invoice-2016-12-08.pdf
+            <span class="file-timestamp">added 1 minute ago via mobile</span>
+            <div class="files-list__options">
+              <a class="file-delete" href="#">Delete</a>
+              <a class="file-preview" href="#">Preview</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="tab4" class="tabs-content__item no-items-msg">
+        <p>No errors</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="assets/javascripts/vendors/materialize.js"></script>
+  <script src="assets/javascripts/default.js"></script>
+</body>
+</html>
