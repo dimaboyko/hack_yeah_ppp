@@ -10,8 +10,26 @@ $(document).ready(function () {
     close: 'select'
   });
 
-  $('#table-data').DataTable();
-  $('select').material_select('destroy');
+
+    $('#table-data').DataTable({
+        language: {
+        search: "Wyszukaj w tabeli:",
+        lengthMenu: "Wyświetlaj _MENU_",
+        emptyTable: "Brak danych",
+        info: "Wyświetlone od _START_ do _END_ z _TOTAL_ rekordów",
+        infoEmpty: "Wyświetlone 0 rekordów",
+        infoFiltered: "(z _MAX_)",
+        zeroRecords: "Nie znaleziono rekordów spełniających kryteria wyszukiwania",
+        paginate: {
+          "first":      "First",
+          "last":       "Last",
+          "next":       "Następne",
+          "previous":   "Poprzednie"
+        },
+      }
+    });
+
+    $('select').material_select();
 
   $('.x-propagate-stop').on('click', function(e){
     e.stopPropagation();
@@ -39,58 +57,4 @@ $(document).ready(function () {
    }
  );
 
- $('.x-search-trigger').on('click', function(e) {
-   $('.x-header').addClass('page-header__search');
-   e.preventDefault();
- });
-
- $('.x-search-close').on('click', function(e) {
-   $('.x-header').removeClass('page-header__search');
-   e.preventDefault();
- });
-
- $('.x-resize-half').on('click', function(e) {
-   $('.custom-modal__content').addClass('custom-modal__content--half');
-   $('.x-resize-default').removeClass('active');
-   $(this).addClass('active');
-   e.preventDefault();
- });
-
- $('.x-resize-default').on('click', function(e) {
-   $('.custom-modal__content').removeClass('custom-modal__content--half');
-   $('.x-resize-half').removeClass('active');
-   $(this).addClass('active');
-   e.preventDefault();
- });
-
-  $('.x-button-add').click(function(e) {
-    e.preventDefault();
-  });
-
- $('body').on('click', 'a.x-disable-add-files', function(e) {
-   e.preventDefault();
-   (new StatusToast).upload_failed();
- })
-
- $('body').on('click', '.x-brand', function(e) {
-   e.preventDefault();
-   window.location = '/app/uploads';
- })
-
- $(document).ready( function () {
-
-} );
-
 });
-$(window).load(function() {
-  //$('.x-loader-body').fadeOut();
-});
-
-function disableUploadFiles() {
-  $('.x-button-add').addClass('x-disable-add-files pointer-events-auto');
-  $('.x-fileupload').fileupload('disable');
-  $('.x-dropzone').on('drop', function(e){
-    (new StatusToast).upload_failed();
-  });
-}
-
