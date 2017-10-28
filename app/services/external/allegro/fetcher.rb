@@ -12,10 +12,8 @@ module External
         auctions.each do |auction_data|
           hack_yeah_app_client.create_auction({
             auctioneer_id: auction_data['userId'],
-            auctioneer_data: nil,
             auction_id: auction_data['itemId'],
             auction_provider: PROVIDER,
-            auction_data: auction_data
           })
         end
       end
