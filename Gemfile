@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'jbuilder', '~> 2.5'
 
+gem 'responders'
 gem 'a9n'
 
 group :development, :test do
