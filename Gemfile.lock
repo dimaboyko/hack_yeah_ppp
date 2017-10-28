@@ -40,12 +40,19 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
+    bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.1.0)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.2)
+    devise (4.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.2)
+      responders
+      warden (~> 1.2.3)
     erubi (1.7.0)
     excon (0.59.0)
     execjs (2.7.0)
@@ -77,6 +84,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    orm_adapter (0.5.0)
     pg (0.21.0)
     pry (0.11.2)
       coderay (~> 1.1.0)
@@ -150,6 +158,8 @@ GEM
     unicorn (5.3.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -165,6 +175,7 @@ PLATFORMS
 DEPENDENCIES
   a9n
   byebug
+  devise
   excon
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

@@ -20,6 +20,8 @@ gem 'a9n'
 
 gem 'excon'
 
+gem 'devise'
+
 group :development, :test do
   gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

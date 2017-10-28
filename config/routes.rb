@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
+  root to: "panel/auctions#index"
+
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get 'verify' => 'verification#show'
@@ -11,6 +15,5 @@ Rails.application.routes.draw do
 
   namespace :panel do
     get 'lista_aukcji' => 'auctions#index'
-
   end
 end
