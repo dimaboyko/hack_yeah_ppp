@@ -22,7 +22,7 @@
       <ul id="dropdown-settings" class="dropdown-content">
         <li><a href="#!">Ustawienia</a></li>
         <li><a href="#!">Pomoc</a></li>
-        <li><a href="#!">Wyloguj</a></li>
+        <li><%= link_to('Wyloguj się', destroy_user_session_path, method: :delete) %></li>
       </ul>
     </div>
   </div>

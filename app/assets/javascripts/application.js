@@ -12,4 +12,4 @@
 //
 //= require vendors/materialize
 //= require common/auction
-
+//= require jquery_ujs
