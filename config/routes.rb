@@ -8,4 +8,9 @@ Rails.application.routes.draw do
       match '*path', to: 'base#routing_error', via: :all
     end
   end
+
+  namespace :panel do
+    get 'lista_aukcji' => 'auctions#index'
+
+  end
 end
