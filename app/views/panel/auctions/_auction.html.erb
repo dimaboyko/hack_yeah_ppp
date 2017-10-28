@@ -1,0 +1,7 @@
+<tr data-target="modal">
+  <td><a href="https://allegro.pl/show_item.php?item=<%= auction.auction_id %>"><%= auction.auction_id %></a></td>
+  <td><%= auction[:auction_data]['itemTitle'] %></td>
+  <td><%= auction[:auction_data]['priceValue'] %></td>
+  <td><%= auction.fraud_possibility? ? 'Podejrzany' : 'Czysty' %></td>
+  <td><a href="#">Szczegóły</a></td>
+</tr>
