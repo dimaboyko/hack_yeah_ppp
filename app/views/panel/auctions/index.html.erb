@@ -3,7 +3,7 @@
     <a href="/" class="brand">VATmobil</a>
     <ul class="main-nav">
       <li><a href="#">Lista aukcji</a></li>
-      <li><a href="#">Wysłane kontrole</a></li>
+      <li><a href="#">Statystyki</a></li>
     </ul>
     <div class="page-header__options">
       <a class="dropdown-button user-menu-trigger" href="#" data-activates="dropdown-settings" data-stoppropagation="true">vatman@vatman.com</a>
@@ -44,6 +44,10 @@
         <%= render partial:  'panel/auctions/auction', collection: @auctions %>
       </tbody>
     </table>
+  </div>
+  <h2 class="section-header">Statystyki podejrzanych rekordów z ostatnich 5 dni</h2>
+  <div class="ct-chart">
+
   </div>
 </main>
 <footer class="page-footer">
