@@ -1,6 +1,6 @@
 <main class="layout-wrapper">
   <div class="basic-form">
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <h2>Edytuj <%= resource_name.to_s.humanize %></h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
@@ -34,7 +34,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Update", class: "btn waves-effect waves-light btn-flat" %>
+        <%= f.submit "Zaktualizuj", class: "btn waves-effect waves-light btn-flat" %>
       </div>
     <% end %>
 
