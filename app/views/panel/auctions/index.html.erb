@@ -55,6 +55,10 @@
 </footer>
 <div id="modal" class="modal open">
     <form action="#">
+      <%= form_for :report %>
+      <%= form_for(:report, as: :form_data, url: panel_request_control_path, html: { method: :post } ) do |f| %>
+      <%= f.hidden_field :auction_id, class: 'x-modal-auction-id' %>
+
       <div class="modal-content">
         <h4>Zgłoszenie kontroli</h4>
         <p>Czy na pewno chcesz zgłosić rekord do kontroli?</p>
