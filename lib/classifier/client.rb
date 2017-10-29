@@ -6,9 +6,7 @@ module Classifier
     include Singleton
 
     def classify_auction(auction)
-      # TODO
-      #post('classify', auction.attributes)
-      auction.update_attribute(:fraud_possibility, true)
+      post('classify', auction.attributes)
     end
 
     private

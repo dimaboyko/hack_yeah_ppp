@@ -1,5 +1,5 @@
 development: &development
-  host: 'http://127.0.0.1:3005'
+  host: 'http://dimaboyko.pythonanywhere.com'
   api_key: '023311d478a46b398c04b5778a1dea1b'
 
 test:
