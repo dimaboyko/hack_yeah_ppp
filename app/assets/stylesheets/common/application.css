@@ -10235,7 +10235,7 @@ body {
 .page-header {
   background: #37474F;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  color: #ECEFF1;
+  color: #EDEFF1;
   margin-bottom: 40px;
 }
 
@@ -10252,7 +10252,7 @@ body {
 }
 
 .page-header__content > a {
-  color: #ECEFF1;
+  color: #EDEFF1;
 }
 
 .page-header__options {
