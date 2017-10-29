@@ -3,7 +3,7 @@ module Panel
     before_action :authenticate_user!
 
     def index
-      @auctions = Auction.all
+      @auctions = Auction.order('created_at DESC').limit(1000)
     end
 
     def export
