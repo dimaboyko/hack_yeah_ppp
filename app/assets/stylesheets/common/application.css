@@ -10386,3 +10386,7 @@ table.dataTable {
 .export-data {
   margin-left: auto;
 }
+
+.drag-target {
+  z-index: 100;
+}
