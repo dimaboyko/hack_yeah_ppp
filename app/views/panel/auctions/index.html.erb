@@ -57,13 +57,13 @@
 <div id="modal" class="modal">
 
     <%= form_for(:report, as: :form_data, url: panel_request_control_path, html: { method: :post }, remote: true ) do |f| %>
-      <%= f.text_field :auction_id, class: 'x-modal-auction-id', value: Auction.last.auction_id %>
+      <%= f.hidden_field :auction_id, class: 'x-modal-auction-id' %>
 
       <div class="modal-content">
         <h4>Zgłoszenie kontroli</h4>
         <p>Czy na pewno chcesz zgłosić rekord do kontroli?</p>
         <div class="input-field">
-          <%= f.text_area :full_description, size: '8x80', class: 'materialize-textarea' %>
+          <%= f.text_area :full_description, size: '8x80', class: 'materialize-textarea x-description' %>
           <label for="description">Opcjonalny komentarz</label>
         </div>
       </div>
