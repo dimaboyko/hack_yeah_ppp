@@ -10211,8 +10211,12 @@ body {
 }
 
 .brand {
+  background: #EDEFF1 url("/images/vatmobile-logo-light.svg") no-repeat center;
   font-size: 26px;
   font-weight: bold;
+  height: 40px;
+  text-indent: -999em;
+  width: 300px;
 }
 
 .main-nav {
@@ -10235,7 +10239,7 @@ body {
 .page-header {
   background: #37474F;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  color: #ECEFF1;
+  color: #EDEFF1;
   margin-bottom: 40px;
 }
 
@@ -10252,7 +10256,7 @@ body {
 }
 
 .page-header__content > a {
-  color: #ECEFF1;
+  color: #EDEFF1;
 }
 
 .page-header__options {
@@ -10294,6 +10298,10 @@ h2 {
 
 .data-summary dt, .data-summary dd {
   margin: 0;
+}
+
+.data-summary dt {
+  font-size: 21px;
 }
 
 .page-footer {
@@ -10369,4 +10377,16 @@ table.dataTable {
 
 .alert {
   background: #D50000;
+}
+
+.section-header {
+  margin: 20px 40px;
+}
+
+.export-data {
+  margin-left: auto;
+}
+
+.drag-target {
+  z-index: 100;
 }

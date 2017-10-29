@@ -1,9 +1,13 @@
 body {
-  background: #EDEFF1;
+  background: $light;
 }
 .brand {
+  background: $light url("/images/vatmobile-logo-light.svg") no-repeat center;
   font-size: 26px;
   font-weight: bold;
+  height: 40px;
+  text-indent: -999em;
+  width: 300px;
 }
 .main-nav {
   display: flex;
@@ -12,14 +16,14 @@ body {
     margin-left: 40px;
   }
   a {
-    color: #fff;
+    color: $white;
     font-size: 18px;
   }
 }
 .page-header {
-  background: #37474F;
+  background: $dark-gray;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  color: #ECEFF1;
+  color: $light;
   margin-bottom: 40px;
 }
 .page-header__content {
@@ -27,7 +31,7 @@ body {
   display: flex;
   padding: 20px 40px;
   > a {
-    color: #ECEFF1;
+    color: $light;
   }
 }
 .page-header__options {
@@ -38,8 +42,8 @@ body {
   max-width: 420px;
   width: 100%;
   .btn {
-    background: #43867B;
-    color: #fff;
+    background: $green;
+    color: $white;
     display: block;
     margin: 20px 0;
     width: 100%;
@@ -50,7 +54,7 @@ h2 {
   margin: 0 0 30px;
 }
 .data-summary {
-  border-bottom: 1px solid #d0d0d0;
+  border-bottom: 1px solid $light-gray;
   display: flex;
   padding: 0 40px 20px;
   margin-bottom: 20px;
@@ -60,9 +64,12 @@ h2 {
   dt, dd {
     margin: 0;
   }
+  dt {
+    font-size: 21px;
+  }
 }
 .page-footer {
-  background: #20479B;
+  background: $dark-blue;
   margin: 40px 0 0;
   padding: 20px 40px;
 }
@@ -70,13 +77,13 @@ h2 {
 .table-wrapper {
   thead {
     th {
-      background: #fff;
+      background: $white;
     }
   }
   tbody {
     td {
-      background: #fff;
-      border-bottom: 1px solid #d0d0d0;
+      background: $white;
+      border-bottom: 1px solid $light-gray;
     }
   }
 }
@@ -90,13 +97,13 @@ table.dataTable tbody th, table.dataTable tbody td {
   margin-right: 40px;
 }
 .user-menu-trigger {
-  color: #fff;
+  color: $white;
 }
 table.dataTable {
   margin-bottom: 10px;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-  background: #fff;
+  background: $white;
 }
 .dataTables_info {
   margin-left: 40px;
@@ -105,13 +112,13 @@ table.dataTable {
   margin-right: 20px;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  background: #43867B;
+  background: $green;
 }
 .table__main-col {
   width: 40%;
 }
 .notice, .alert {
-  color: #fff;
+  color: $white;
   font-weight: bold;
   margin: 0;
   padding: 10px 40px;
@@ -120,9 +127,18 @@ table.dataTable {
   }
 }
 .notice {
-  background: #FFC107;
-  color: #37474F;
+  background: $yellow;
+  color: $dark-gray;
 }
 .alert {
-  background: #D50000;
+  background: $red;
+}
+.section-header {
+  margin: 20px 40px;
+}
+.export-data {
+  margin-left: auto;
+}
+.drag-target {
+  z-index: 100;
 }
