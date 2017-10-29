@@ -21,9 +21,11 @@ module Auctions
         auction_data = ::Scarpers::Auction.perform(auction.auction_id)
 
         # MOVE to DelayedJob
-        # hash_data = ::Scarpers::Krs.perform(auction.auctioneer_data['company_nip'])
-        # auction.auctioneer_data = Hash(auction.auctioneer_data).merge(hash_data)
-        # auction.save
+        krs_data = ::Scarpers::Krs.perform(auction.auctioneer_data['company_nip'])
+        unless krs_data.empty?
+          auction.auctioneer_data = Hash(auction.auctioneer_data).merge(krs_data)
+          auction.save
+        end
 
         # MOVE to DelayedJob
         ::Classifier::Client.instance.classify_auction(auction)
