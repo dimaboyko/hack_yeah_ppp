@@ -56,7 +56,7 @@
 
 <div id="modal" class="modal">
 
-    <%= form_for(:report, as: :form_data, url: panel_request_control_path, html: { method: :post } ) do |f| %>
+    <%= form_for(:report, as: :form_data, url: panel_request_control_path, html: { method: :post }, remote: true ) do |f| %>
       <%= f.text_field :auction_id, class: 'x-modal-auction-id', value: Auction.last.auction_id %>
 
       <div class="modal-content">
