@@ -19,12 +19,12 @@
   <aside class="data-summary">
     <dl>
       <dt>Ilość rekordów:</dt>
-      <dd>12331</dd>
+      <dd><%= Auction.count %></dd>
     </dl>
     <dl>
-      <dt>Podejrzane:</dt> <dd>2302</dd></dl>
+      <dt>Podejrzane:</dt> <dd><%= Auction.where(fraud_possibility: true).count %></dd></dl>
     <dl><dt>Ostatnia aktualizacja:</dt>
-      <dd>12.12.2017 12:12:12</dd></dl>
+      <dd><%= Auction.maximum(:updated_at) %></dd></dl>
     <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn waves-effect waves-light' %>
   </aside>
   <h2>Lista aukcji</h2>
