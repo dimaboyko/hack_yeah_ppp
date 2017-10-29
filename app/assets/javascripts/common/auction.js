@@ -33,7 +33,7 @@ $(document).ready(function() {
   $('.dropdown-button').dropdown({constrainWidth: false, belowOrigin: true});
 
   $('.x-msg').on('click', function(){
-    Materialize.toast('Wysłano zgłoszenie do kontroli.', 4000);
+    Materialize.toast('Wysłano zgłoszenie do kontroli.', 2000);
   });
 
   $('.x-modal').on('click', function(){

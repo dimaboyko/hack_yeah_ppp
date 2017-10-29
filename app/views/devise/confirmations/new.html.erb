@@ -1,6 +1,6 @@
 <main class="layout-wrapper">
   <div class="basic-form">
-    <h2>Resend confirmation instructions</h2>
+    <h2>Wyślij potwierdzenie</h2>
 
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
@@ -11,7 +11,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Resend confirmation instructions", class: "btn waves-effect waves-light btn-flat" %>
+        <%= f.submit "Wyślij potwierdzenie", class: "btn waves-effect waves-light btn-flat" %>
       </div>
     <% end %>
 
