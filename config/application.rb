@@ -13,5 +13,7 @@ module HackYeahPpp
 
     Dir[Rails.root.join('lib', '*.rb')].each { |file| require file }
     Dir[Rails.root.join('lib', '**', '*.rb')].each { |file| require file }
+
+    ActionMailer::Base.smtp_settings = A9n.smtp_settings.to_hash
   end
 end
