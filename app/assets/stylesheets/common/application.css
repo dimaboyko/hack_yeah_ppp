@@ -10296,6 +10296,10 @@ h2 {
   margin: 0;
 }
 
+.data-summary dt {
+  font-size: 21px;
+}
+
 .page-footer {
   background: #20479B;
   margin: 40px 0 0;
@@ -10369,4 +10373,12 @@ table.dataTable {
 
 .alert {
   background: #D50000;
+}
+
+.section-header {
+  margin: 20px 40px;
+}
+
+.export-data {
+  margin-left: auto;
 }

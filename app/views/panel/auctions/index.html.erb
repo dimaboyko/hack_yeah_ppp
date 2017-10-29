@@ -1,6 +1,6 @@
 <header class="page-header x-header">
   <div class="layout-wrapper page-header__content">
-    <a href="index.html" class="brand">VATman</a>
+    <a href="index.html" class="brand">VATmobil</a>
     <ul class="main-nav">
       <li><a href="#">Lista aukcji</a></li>
       <li><a href="#">Wysłane kontrole</a></li>
@@ -25,11 +25,9 @@
       <dt>Podejrzane:</dt> <dd><%= Auction.where(fraud_possibility: true).count %></dd></dl>
     <dl><dt>Ostatnia aktualizacja:</dt>
       <dd><%= Auction.maximum(:updated_at) %></dd></dl>
-    <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn waves-effect waves-light' %>
+    <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn waves-effect waves-light export-data' %>
   </aside>
-  <h2>Lista aukcji</h2>
-
-
+  <h2 class="section-header">Lista aukcji</h2>
   <div class="table-wrapper">
     <table class="bordered table-files x-table" id="table-data">
       <thead>
@@ -50,7 +48,7 @@
 </main>
 <footer class="page-footer">
   <div class="layout-wrapper">
-    &copy; 2017 VATman
+    &copy; 2017 VATmobil
   </div>
 </footer>
 
@@ -74,5 +72,5 @@
     <% end %>
 </div>
 <div id="slide-out" class="side-nav custom-sidebar">
-  sdsadsada
+  Dane szczegółowe ...
 </div>

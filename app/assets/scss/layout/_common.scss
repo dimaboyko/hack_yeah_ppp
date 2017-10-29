@@ -60,6 +60,9 @@ h2 {
   dt, dd {
     margin: 0;
   }
+  dt {
+    font-size: 21px;
+  }
 }
 .page-footer {
   background: $dark-blue;
@@ -125,4 +128,10 @@ table.dataTable {
 }
 .alert {
   background: $red;
+}
+.section-header {
+  margin: 20px 40px;
+}
+.export-data {
+  margin-left: auto;
 }
