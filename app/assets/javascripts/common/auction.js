@@ -44,6 +44,8 @@ $(document).ready(function () {
     }
   );
 
+  $('#modal').modal();
+
   $('.select-dropdown').dropdown({
      constrainWidth: false,
      belowOrigin: true

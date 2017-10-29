@@ -1,6 +1,21 @@
 body {
   background: #EDEFF1;
 }
+.brand {
+  font-size: 26px;
+  font-weight: bold;
+}
+.main-nav {
+  display: flex;
+  margin: 0 0 0 20px;
+  li {
+    margin-left: 40px;
+  }
+  a {
+    color: #fff;
+    font-size: 18px;
+  }
+}
 .page-header {
   background: #37474F;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
@@ -8,12 +23,15 @@ body {
   margin-bottom: 40px;
 }
 .page-header__content {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
   padding: 20px 40px;
   > a {
     color: #ECEFF1;
   }
+}
+.page-header__options {
+  margin-left: auto;
 }
 .basic-form {
   margin: 40px auto 0;
@@ -31,7 +49,18 @@ h2 {
   font-size: 36px;
   margin: 0 0 30px;
 }
-
+.data-summary {
+  border-bottom: 1px solid #d0d0d0;
+  display: flex;
+  padding: 0 40px 20px;
+  margin-bottom: 20px;
+  dl {
+    margin: 0 40px 0 0;
+  }
+  dt, dd {
+    margin: 0;
+  }
+}
 .page-footer {
   background: #20479B;
   margin: 40px 0 0;
