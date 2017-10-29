@@ -13,8 +13,9 @@ module Panel
     end
 
     def request_control
-      ReportMailer.report(params[:auction_id]).deliver_now
-      logger.info(current_user.id)
+      permitted_params = params.require(:report).permit(:auction_id, :full_description)
+      ReportMailer.report(permitted_params[:auction_id]).deliver_now
+      logger.info(current_user.id, permitted_params[:auction_id])
       redirect_to action: :index
     end
 

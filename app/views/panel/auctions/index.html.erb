@@ -52,10 +52,9 @@
   <div class="layout-wrapper">
     &copy; 2017 VATman
   </div>
-</footer>
+
 <div id="modal" class="modal">
-    <form action="#">
-      <%= form_for :report %>
+
       <%= form_for(:report, as: :form_data, url: panel_request_control_path, html: { method: :post } ) do |f| %>
       <%= f.hidden_field :auction_id, class: 'x-modal-auction-id' %>
 
@@ -63,7 +62,7 @@
         <h4>Zgłoszenie kontroli</h4>
         <p>Czy na pewno chcesz zgłosić rekord do kontroli?</p>
         <div class="input-field">
-          <textarea id="description" name="name" rows="8" cols="80" class="materialize-textarea"></textarea>
+          <%= f.text_area :full_description, size: '8x80', class: 'materialize-textarea' %>
           <label for="description">Opcjonalny komentarz</label>
         </div>
       </div>
@@ -71,7 +70,7 @@
         <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Anuluj</a>
         <button type="submit" class="btn modal-action modal-close waves-effect waves-green x-msg">Zgłoś</button>
       </div>
-    </form>
+    <% end %>
 </div>
 <div id="slide-out" class="side-nav custom-sidebar">
   sdsadsada
