@@ -28,7 +28,7 @@ module Auctions
     end
 
     def build_row(auction)
-      nick = auction.auctioneer_data['nick'].to_s.sub(/[^a-zA-Z0-9._-]+/, ''),
+      nick = auction.auctioneer_data['nick'].to_s.sub(/[^a-zA-Z0-9._-]+/, '')
       clean_nip = auction.auctioneer_data['company_nip'].to_s.gsub(/[^0-9]/, '')
 
       emails = Array(auction.auctioneer_data['emails']).select { |email|
@@ -42,10 +42,10 @@ module Auctions
       }
 
       [
-        nick.class,
-        clean_nip.class,
-        emails.join(',').class,
-        phones.join(',').class
+        nick,
+        clean_nip,
+        emails.join(','),
+        phones.join(',')
       ]
     end
 
