@@ -1,17 +1,8 @@
 
 $(document).ready(function () {
-  // $('select').not('.x-category-select').material_select();
-
-  $('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15, // Creates a dropdown of 15 years to control year
-    format: 'yyyy/mm/dd',
-    clear: '',
-    close: 'select'
-  });
 
 
-    $('#table-data').DataTable({
+    var table = $('#table-data').DataTable({
         language: {
         search: "Wyszukaj w tabeli:",
         lengthMenu: "Wyświetlaj _MENU_",
@@ -29,6 +20,16 @@ $(document).ready(function () {
       }
     });
 
+    table.on( 'draw', function () {
+      $('.x-drawer-button').sideNav({
+          menuWidth: 488,
+          edge: 'right',
+          closeOnClick: false,
+          draggable: true
+        }
+      );
+    } );
+
     $('select').material_select();
 
   $('.x-propagate-stop').on('click', function(e){
@@ -42,8 +43,6 @@ $(document).ready(function () {
       draggable: true
     }
   );
-
-  $('ul.tabs').tabs();
 
   $('.select-dropdown').dropdown({
      constrainWidth: false,
