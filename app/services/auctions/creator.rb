@@ -9,7 +9,7 @@ module Auctions
     def perform
       ::Auction.create!(auction_data).tap { |auction|
 
-        # MOVE to DelayedJob
+        # MOVE to Background
         # response = ::Classifier::Client.instance.classify_auction(auction)
         # auction.update_attribute(:fraud_possibility, response == 'True')
       }
