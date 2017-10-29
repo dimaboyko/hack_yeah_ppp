@@ -52,11 +52,12 @@
   <div class="layout-wrapper">
     &copy; 2017 VATman
   </div>
+</footer>
 
 <div id="modal" class="modal">
 
-      <%= form_for(:report, as: :form_data, url: panel_request_control_path, html: { method: :post } ) do |f| %>
-      <%= f.hidden_field :auction_id, class: 'x-modal-auction-id' %>
+    <%= form_for(:report, as: :form_data, url: panel_request_control_path, html: { method: :post } ) do |f| %>
+      <%= f.text_field :auction_id, class: 'x-modal-auction-id' %>
 
       <div class="modal-content">
         <h4>Zgłoszenie kontroli</h4>
