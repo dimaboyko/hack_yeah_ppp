@@ -10,8 +10,8 @@ module Auctions
       ::Auction.create!(auction_data).tap { |auction|
 
         # MOVE to DelayedJob
-        response = ::Classifier::Client.instance.classify_auction(auction)
-        auction.update_attribute(:fraud_possibility, response == 'True')
+        # response = ::Classifier::Client.instance.classify_auction(auction)
+        # auction.update_attribute(:fraud_possibility, response == 'True')
       }
     rescue ActiveRecord::RecordNotUnique
       true
