@@ -1,7 +1,7 @@
 <tr>
   <td><a href="https://allegro.pl/show_item.php?item=<%= auction.auction_id %>"><%= auction.auction_id %></a></td>
-  <td><%= auction[:auction_data]['itemTitle'] %></td>
-  <td><%= auction[:auction_data]['priceValue'] %></td>
+  <td><%= auction[:auction_data]['title'] %></td>
+  <td><%= Money.new(auction[:auction_data]['price'].to_i, 'PLN').format %></td>
   <td><%= auction.fraud_possibility? ? 'Podejrzany' : 'Czysty' %></td>
   <td><button data-target="modal"  data-auction-id="<%= auction.auction_id  %>" class="btn waves-effect waves-light modal-trigger red x-modal">Zgłoś do kontroli</button></td>
   <td><a href="#" data-activates="slide-out" class="btn waves-effect waves-light x-drawer-button">Szczegóły</a></td>

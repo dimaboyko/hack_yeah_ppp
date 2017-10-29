@@ -30,6 +30,8 @@ gem 'newrelic_rpm'
 
 gem 'sidekiq'
 
+gem 'money'
+
 group :development, :test do
   gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
