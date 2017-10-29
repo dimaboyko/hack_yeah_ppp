@@ -36,4 +36,10 @@ $(document).ready(function() {
     Materialize.toast('Wysłano zgłoszenie do kontroli.', 4000);
   });
 
+  $('.x-modal').on('click', function(){
+    var auctionId = $(this).attr('data-auction-id');
+    $('.x-modal-auction-id').val(auctionId);
+    $('.x-description').val('').blur();
+  });
+
 });
