@@ -1,6 +1,10 @@
 <header class="page-header x-header">
   <div class="layout-wrapper page-header__content">
     <a href="index.html" class="brand">VATman</a>
+    <ul class="main-nav">
+      <li><a href="#">Lista aukcji</a></li>
+      <li><a href="#">Wysłane kontrole</a></li>
+    </ul>
     <div class="page-header__options">
       <a class="dropdown-button user-menu-trigger" href="#" data-activates="dropdown-settings" data-stoppropagation="true">vatman@vatman.com</a>
       <ul id="dropdown-settings" class="dropdown-content">
@@ -12,8 +16,19 @@
   </div>
 </header>
 <main class="layout-wrapper">
+  <aside class="data-summary">
+    <dl>
+      <dt>Ilość rekordów:</dt>
+      <dd>12331</dd>
+    </dl>
+    <dl>
+      <dt>Podejrzane:</dt> <dd>2302</dd></dl>
+    <dl><dt>Ostatnia aktualizacja:</dt>
+      <dd>12.12.2017 12:12:12</dd></dl>
+    <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn waves-effect waves-light' %>
+  </aside>
   <h2>Lista aukcji</h2>
-  <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn btn--blue' %>
+
 
   <div class="table-wrapper">
     <table class="bordered table-files x-table" id="table-data">
@@ -38,33 +53,21 @@
     &copy; 2017 VATman
   </div>
 </footer>
-<div id="modal" class="modal bottom-sheet custom-modal">
-  <div class="custom-modal__header">
-    <div class="layout-wrapper custom-modal__header-content">
-      <span class="invoice-title">invoice-2016-12-08 <span>added 12th December via mobile</span></span>
-      <div class="modal-options">
-        <a href="#!" class="modal-action modal-prev">Preview</a>
-        <a href="#!" class="modal-action modal-next">Next</a>
-        <a href="#!" class="modal-action modal-close">Close</a>
-      </div>
-    </div>
-    <div class="custom-modal__actions">
-      <div class="layout-wrapper custom-modal__actions-content">
-        <a href="#" class="btn btn-flat blue waves-effect waves-light">Send</a>
-        <a href="#" class="btn btn-flat btn--cancel waves-effect waves-light">Delete</a>
-        <a class="dropdown-button options-button waves-effect" href="#" data-activates="dropdown-options5">Options</a>
-        <ul id="dropdown-options5" class="dropdown-content">
-          <li><a href="#!">Send</a></li>
-          <li><a href="#!">Delete</a></li>
-          <li><a href="#!">Select</a></li>
-        </ul>
-        <div class="resize-options">
-          <a class="resize-options__half x-resize-half" href="#">Resize 50/50</a>
-          <a class="resize-options__default x-resize-default" href="#">Resize 70/30</a>
+<div id="modal" class="modal open">
+    <form action="#">
+      <div class="modal-content">
+        <h4>Zgłoszenie kontroli</h4>
+        <p>Czy na pewno chcesz zgłosić rekord do kontroli?</p>
+        <div class="input-field">
+          <textarea id="description" name="name" rows="8" cols="80" class="materialize-textarea"></textarea>
+          <label for="description">Opcjonalny komentarz</label>
         </div>
       </div>
-    </div>
-  </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Anuluj</a>
+        <button type="submit" class="btn modal-action modal-close waves-effect waves-green">Zgłoś</button>
+      </div>
+    </form>
 </div>
 <div id="slide-out" class="side-nav custom-sidebar">
   sdsadsada
