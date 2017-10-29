@@ -10390,3 +10390,12 @@ table.dataTable {
 .drag-target {
   z-index: 100;
 }
+
+.modal .modal-footer {
+  height: auto;
+  padding: 25px;
+}
+
+.ct-chart {
+  height: 300px;
+}
