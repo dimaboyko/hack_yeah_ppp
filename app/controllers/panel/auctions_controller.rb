@@ -20,6 +20,8 @@ module Panel
       logger.info([current_user.id, permitted_params[:auction_id]])
     end
 
+    def stats; end
+
     def logger
       @logger ||= Logger.new("#{Rails.root}/log/monitoring.log")
     end

@@ -27,23 +27,10 @@
       <dd><%= Auction.maximum(:updated_at) %></dd></dl>
     <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn waves-effect waves-light export-data' %>
   </aside>
-  <h2 class="section-header">Lista aukcji</h2>
-  <div class="table-wrapper">
-    <table class="bordered table-files x-table" id="table-data">
-      <thead>
-        <tr>
-          <th>ID aukcji</th>
-          <th class="table__main-col">Przedmiot auckji</th>
-          <th>Kwota</th>
-          <th>Status</th>
-          <th>Zgłoszenie</th>
-          <th>Akcje</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render partial:  'panel/auctions/auction', collection: @auctions %>
-      </tbody>
-    </table>
+
+  <h2 class="section-header">Statystyki podejrzanych rekordów z ostatnich 5 dni</h2>
+  <div class="ct-chart">
+
   </div>
 </main>
 <footer class="page-footer">

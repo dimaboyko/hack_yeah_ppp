@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   end
 
   namespace :panel do
-    get 'lista_aukcji' => 'auctions#index'
+    get 'lista_aukcji' => 'auctions#index', as: :list
+    get 'statystyki' => 'auctions#stats', as: :stats
     get 'eksport_do_csv', to: 'auctions#export', as: :auctions_export
     post 'wyslij_kontrole', to: 'auctions#request_control', as: :request_control
   end
