@@ -14,7 +14,7 @@ module Auctions
         auction.update_attribute(:fraud_possibility, response == 'True')
       }
     rescue ActiveRecord::RecordNotUnique
-      false
+      true
     end
 
     private

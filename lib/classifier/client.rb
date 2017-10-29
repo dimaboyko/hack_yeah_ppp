@@ -6,7 +6,9 @@ module Classifier
     include Singleton
 
     def classify_auction(auction)
-      post('classify', auction.attributes)
+      # attrs = auction.attributes.slice('auctioneer_id', 'auctioneer_data', 'auction_data', 'auction_id')
+      # post('classify', attrs)
+      'False'
     end
 
     private
@@ -15,7 +17,7 @@ module Classifier
 
     def post(path, hash_data)
       request(:post, path, body: hash_data.to_json)
-    rescue ::Excon::Errors::SocketError, ::AccountantPanel::RequestFailed
+    rescue ::Excon::Errors::SocketError, ::Classifier::RequestFailed
       nil
     end
 
