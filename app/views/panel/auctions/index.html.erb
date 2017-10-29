@@ -13,6 +13,8 @@
 </header>
 <main class="layout-wrapper">
   <h2>Lista aukcji</h2>
+  <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn btn--blue' %>
+
   <div class="table-wrapper">
     <table class="bordered table-files x-table" id="table-data">
       <thead>

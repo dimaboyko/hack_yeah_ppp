@@ -1,4 +1,7 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
 
   devise_for :users
 
@@ -15,5 +18,6 @@ Rails.application.routes.draw do
 
   namespace :panel do
     get 'lista_aukcji' => 'auctions#index'
+    get 'eksport_do_csv', to: 'auctions#export', as: :auctions_export
   end
 end
