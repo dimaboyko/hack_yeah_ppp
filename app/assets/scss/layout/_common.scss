@@ -2,8 +2,12 @@ body {
   background: $light;
 }
 .brand {
+  background: $light url("/images/vatmobile-logo-light.svg") no-repeat center;
   font-size: 26px;
   font-weight: bold;
+  height: 40px;
+  text-indent: -999em;
+  width: 300px;
 }
 .main-nav {
   display: flex;
