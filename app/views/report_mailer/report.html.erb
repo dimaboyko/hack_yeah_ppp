@@ -9,6 +9,9 @@
       Sprawdź sprzedawcę wystawiającego aukcję <a href="https://allegro.pl/show_item.php?item=<%= @auction.auction_id %>"><%= @auction.auction_id %></a><br>
     </p>
 
+    <p>Komunikat od analityka <%= @admin.email %>:</p>
+    <p><%= @full_description %></p>
+
     <p>Dzięki!</p>
   </body>
 </html>
