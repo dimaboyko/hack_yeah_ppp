@@ -11,5 +11,11 @@ module Panel
 
       send_data generator.csv_string, filename: generator.csv_file_name
     end
+
+    def request_control
+      ReportMailer.report(params[:auction_id]).deliver_now
+
+      redirect_to action: :index
+    end
   end
 end
