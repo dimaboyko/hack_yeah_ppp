@@ -10303,6 +10303,10 @@ table.dataTable {
   background: #43867B;
 }
 
+.table__main-col {
+  width: 40%;
+}
+
 .notice, .alert {
   color: #fff;
   font-weight: bold;

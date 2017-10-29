@@ -11,21 +11,10 @@
     </div>
   </div>
 </header>
-<!-- <div class="section-header">
-  <section class="layout-wrapper">
-    <h1>Welcome Jonathan</h1>
-    <div class="status-summary">
-      <span class="status-summary__label">Check out status your files:</span>
-      <ul>
-        <li class="status status--recognized">2 file recognized</li>
-        <li class="status status--ready">3 files are ready to booked</li>
-        <li class="status status--queued">2 file queued</li>
-      </ul>
-    </div>
-  </section>
-</div> -->
 <main class="layout-wrapper">
   <h2>Lista aukcji</h2>
+  <%= link_to 'Pobierz CSV', panel_auctions_export_path, class: 'btn btn--blue' %>
+
   <div class="table-wrapper">
     <table class="bordered table-files x-table" id="table-data">
       <thead>
@@ -34,7 +23,8 @@
           <th class="table__main-col">Przedmiot auckji</th>
           <th>Kwota</th>
           <th>Status</th>
-          <th>Szczegóły</th>
+          <th>Zgłoszenie</th>
+          <th>Akcje</th>
         </tr>
       </thead>
       <tbody>
