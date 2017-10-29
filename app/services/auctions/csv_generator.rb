@@ -3,7 +3,7 @@ module Auctions
   class CsvGenerator
 
     def csv_string
-      CSV.generate(force_quotes: false) { |csv|
+      CSV.generate(force_quotes: false, col_sep: ';') { |csv|
         csv << csv_header
         frauded_auctions.each do |auction|
 
@@ -32,20 +32,20 @@ module Auctions
       clean_nip = auction.auctioneer_data['company_nip'].to_s.gsub(/[^0-9]/, '')
 
       emails = Array(auction.auctioneer_data['emails']).select { |email|
-        ::Regexp.new(/(^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9\-.]+$)/).match?(email.to_s)
+        email.present? && ::Regexp.new(/(^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9\-.]+$)/).match?(email.to_s)
       }
 
       phones = Array(auction.auctioneer_data['phones']).map { |phone|
-        phone.to_s.sub("+48", "")
+        phone.present? &&  phone.to_s.sub("+48", "")
       }.select { |phone|
         ::Regexp.new(/^\d{9,11}$/).match?(phone.to_s)
       }
 
       [
-        nick,
-        clean_nip,
-        emails.join(','),
-        phones.join(',')
+        nick.class,
+        clean_nip.class,
+        emails.join(',').class,
+        phones.join(',').class
       ]
     end
 
