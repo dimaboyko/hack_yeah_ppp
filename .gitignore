@@ -14,4 +14,5 @@ node_modules
 
 .DS_Store
 db/*.sqlite3
-config/*.yml
+config/configuration.yml
+config/database.yml
